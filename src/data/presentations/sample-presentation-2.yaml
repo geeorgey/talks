@@ -1,0 +1,229 @@
+id: "presentation-002"
+title: "Sustainable Innovation in Deep Tech"
+description: "Exploring how deep technology innovations can drive sustainable solutions for global challenges. This presentation covers breakthrough technologies in materials science, biotechnology, and clean energy."
+author: "YOSHIDA George"
+date: "2024-02-20"
+tags: ["Deep Tech", "Sustainability", "Innovation", "Clean Energy", "Biotechnology", "Materials Science"]
+category: "Technology"
+thumbnail: "/images/thumbnails/sustainable-innovation.jpg"
+duration: 30
+event: "Global Innovation Summit 2024"
+location: "Singapore"
+language: "en"
+status: "published"
+
+slides:
+  - id: "slide-001"
+    title: "Sustainable Innovation in Deep Tech"
+    content: "Breakthrough Technologies for a Better Future"
+    type: "title"
+    background: "/images/backgrounds/green-tech.jpg"
+    notes: "Opening slide emphasizing the intersection of deep tech and sustainability."
+
+  - id: "slide-002"
+    title: "The Challenge We Face"
+    content: |
+      <ul>
+        <li>Climate change and environmental degradation</li>
+        <li>Resource scarcity and waste management</li>
+        <li>Energy transition requirements</li>
+        <li>Food security and agricultural sustainability</li>
+        <li>Urban population growth</li>
+      </ul>
+    type: "bullet"
+    notes: "Set the context by highlighting major global challenges that require innovative solutions."
+
+  - id: "slide-003"
+    title: "What is Deep Tech?"
+    content: |
+      <h3>Deep Technology:</h3>
+      <p>Science-based innovations that require substantial R&D investment and have the potential to create transformational impact</p>
+      
+      <h3>Key Characteristics:</h3>
+      <ul>
+        <li>Based on scientific discoveries</li>
+        <li>Long development cycles</li>
+        <li>High technical risk, high reward</li>
+        <li>Significant barriers to entry</li>
+      </ul>
+    type: "content"
+    notes: "Define deep tech clearly to ensure audience understanding."
+
+  - id: "slide-004"
+    title: "Deep Tech Market Growth"
+    content: "The global deep tech market is projected to reach $3.4 trillion by 2030"
+    type: "content"
+    image: "/images/slides/deep-tech-market-growth.jpg"
+    notes: "Show market data to demonstrate the economic significance of deep tech."
+
+  - id: "slide-005"
+    title: "3 Key Areas of Impact"
+    content: |
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; text-align: center;">
+        <div>
+          <h3>🔬 Materials Science</h3>
+          <p>Advanced materials for energy storage and efficiency</p>
+        </div>
+        <div>
+          <h3>🧬 Biotechnology</h3>
+          <p>Bio-based manufacturing and sustainable agriculture</p>
+        </div>
+        <div>
+          <h3>⚡ Clean Energy</h3>
+          <p>Next-generation renewable energy technologies</p>
+        </div>
+      </div>
+    type: "content"
+    notes: "Highlight three main areas where deep tech is making sustainable impact."
+
+  - id: "slide-006"
+    title: "Case Study: Perovskite Solar Cells"
+    content: |
+      <h3>Revolutionary Solar Technology</h3>
+      <ul>
+        <li>30%+ efficiency rates (vs 20% traditional silicon)</li>
+        <li>Lower manufacturing costs</li>
+        <li>Flexible and lightweight design</li>
+        <li>Shorter energy payback time</li>
+      </ul>
+      
+      <p><strong>Impact:</strong> Could accelerate solar adoption globally</p>
+    type: "content"
+    image: "/images/slides/perovskite-solar-cells.jpg"
+    notes: "Specific example of how deep tech is improving renewable energy efficiency."
+
+  - id: "slide-007"
+    title: "Biotechnology Innovation"
+    content: |
+      <h3>Lab-grown Materials</h3>
+      <ul>
+        <li>Biofabricated leather and textiles</li>
+        <li>Cultured meat production</li>
+        <li>Bio-based plastics and chemicals</li>
+        <li>Engineered microorganisms for carbon capture</li>
+      </ul>
+      
+      <h3>Environmental Benefits</h3>
+      <ul>
+        <li>90% reduction in greenhouse gas emissions</li>
+        <li>99% less land use requirement</li>
+        <li>Elimination of animal welfare concerns</li>
+      </ul>
+    type: "content"
+    notes: "Demonstrate how biotechnology is creating sustainable alternatives to traditional materials."
+
+  - id: "slide-008"
+    title: "Albert Einstein"
+    content: "A new type of thinking is essential if mankind is to survive and move toward higher levels."
+    type: "quote"
+    notes: "Einstein quote to emphasize the need for innovative thinking in addressing global challenges."
+
+  - id: "slide-009"
+    title: "Leave a Nest's Approach"
+    content: |
+      <h3>Bridge Science and Society</h3>
+      <ul>
+        <li>Research incubation programs</li>
+        <li>Industry-academia collaboration</li>
+        <li>Deep tech startup acceleration</li>
+        <li>Educational initiatives</li>
+      </ul>
+      
+      <h3>Focus Areas</h3>
+      <ul>
+        <li>Next-generation materials</li>
+        <li>Bioengineering solutions</li>
+        <li>Clean energy technologies</li>
+        <li>Circular economy innovations</li>
+      </ul>
+    type: "content"
+    notes: "Explain Leave a Nest's role in fostering sustainable deep tech innovation."
+
+  - id: "slide-010"
+    title: "The Innovation Ecosystem"
+    content: |
+      <div style="text-align: center;">
+        <h3>Universities & Research Institutions</h3>
+        <p>↓ Knowledge Creation ↓</p>
+        <h3>Startups & Entrepreneurs</h3>
+        <p>↓ Commercialization ↓</p>
+        <h3>Industry & Government</h3>
+        <p>↓ Scale & Implementation ↓</p>
+        <h3>Sustainable Impact</h3>
+      </div>
+    type: "content"
+    notes: "Illustrate the collaborative ecosystem needed for successful deep tech innovation."
+
+  - id: "slide-011"
+    title: "Investment Trends"
+    content: |
+      <h3>Deep Tech Funding Growth</h3>
+      <ul>
+        <li>$60B invested globally in 2023</li>
+        <li>40% year-over-year growth</li>
+        <li>Sustainability focus driving investment</li>
+        <li>Government support increasing worldwide</li>
+      </ul>
+      
+      <h3>Key Investor Types</h3>
+      <ul>
+        <li>Venture capital firms</li>
+        <li>Corporate venture arms</li>
+        <li>Government funding agencies</li>
+        <li>Impact investors</li>
+      </ul>
+    type: "content"
+    notes: "Show the financial momentum behind sustainable deep tech."
+
+  - id: "slide-012"
+    title: "Challenges and Solutions"
+    content: |
+      <h3>Technical Challenges</h3>
+      <ul>
+        <li>Long development timelines</li>
+        <li>High capital requirements</li>
+        <li>Regulatory hurdles</li>
+        <li>Scaling manufacturing</li>
+      </ul>
+      
+      <h3>Strategic Solutions</h3>
+      <ul>
+        <li>Stage-gate development processes</li>
+        <li>Strategic partnerships</li>
+        <li>Early regulatory engagement</li>
+        <li>Modular scaling approaches</li>
+      </ul>
+    type: "content"
+    notes: "Address common challenges and provide practical solutions."
+
+  - id: "slide-013"
+    title: "Future Outlook"
+    content: |
+      <h3>Next 5 Years</h3>
+      <ul>
+        <li>Quantum computing breakthrough applications</li>
+        <li>Advanced AI for materials discovery</li>
+        <li>Fusion energy commercialization</li>
+        <li>Synthetic biology scaling</li>
+      </ul>
+      
+      <p style="margin-top: 30px; font-size: 1.2em; color: #059669;">
+        <strong>Deep tech will be the foundation of sustainable innovation</strong>
+      </p>
+    type: "content"
+    notes: "Paint a vision of the future with deep tech at the center of sustainability."
+
+  - id: "slide-014"
+    title: "Thank You"
+    content: |
+      <div style="text-align: center;">
+        <h3>Leave a Nest Co., Ltd.</h3>
+        <p>Director & CIO - YOSHIDA George</p>
+        <br>
+        <p>Email: george@leaveanest.com</p>
+        <p>Website: https://lne.st/k</p>
+        <br>
+        <h3>Let's shape the future together</h3>
+      </div>
+    type: "content"
+    notes: "Closing slide with call to action for collaboration."
