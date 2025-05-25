@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プレゼンテーションポートフォリオ - 吉田丈治</title>
+    <meta name="description" content="吉田丈治のプレゼンテーションポートフォリオ。2800以上のスライドを含む研究開発・ビジネス・教育分野のプレゼンテーションを公開中。">
+    <link rel="icon" href="/talks/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stats {
+            background: #f8fafc;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        
+        .stat-item p {
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+        
+        .profile {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info .title {
+            color: #2563eb;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .presentation-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .presentation-card h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .presentation-card p {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+        }
+        
+        .footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <strong>Portfolio</strong>
+                </div>
+                <div class="nav-links">
+                    <a href="/talks/">ホーム</a>
+                    <a href="/talks/presentations.html">プレゼンテーション</a>
+                    <a href="#profile">プロフィール</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>プレゼンテーション<br>ポートフォリオ</h1>
+            <p>吉田丈治 - 取締役CIO<br>株式会社リバネス</p>
+            <p>2800以上のスライドを含む豊富なプレゼンテーションを公開中</p>
+            <a href="/talks/presentations.html" class="btn">プレゼンテーションを見る</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>プレゼンテーション</p>
+                </div>
+                <div class="stat-item">
+                    <h3>31+</h3>
+                    <p>スライド</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>カテゴリ</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>タグ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="section" id="profile">
+        <div class="container">
+            <h2>プロフィール</h2>
+            <div class="profile">
+                <div class="avatar">👤</div>
+                <div class="profile-info">
+                    <h3>吉田丈治</h3>
+                    <div class="title">取締役CIO</div>
+                    <p>株式会社リバネス取締役CIO、株式会社リバネスナレッジ代表取締役社長。研究開発、事業開発、教育分野で活動し、2800以上のプレゼンテーションスライドを管理・公開している。テクノロジーとビジネスの融合により、科学技術の社会実装を推進している。</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://lne.st/k" target="_blank" style="color: #2563eb; margin-right: 1rem;">Website</a>
+                        <a href="https://twitter.com/george" target="_blank" style="color: #2563eb; margin-right: 1rem;">Twitter</a>
+                        <a href="https://linkedin.com/in/george" target="_blank" style="color: #2563eb;">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Presentations -->
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <h2>最近のプレゼンテーション</h2>
+            <div class="presentation-grid">
+                <div class="presentation-card">
+                    <h4>AI時代のビジネス変革 - 生成AIが変える働き方</h4>
+                    <p>生成AIの急速な発展により、ビジネスの在り方が根本的に変わろうとしています。</p>
+                    <div class="tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">DX</span>
+                        <span class="tag">ビジネス変革</span>
+                        <span class="tag">生成AI</span>
+                    </div>
+                </div>
+                <div class="presentation-card">
+                    <h4>Sustainable Innovation in Deep Tech</h4>
+                    <p>Deep tech領域におけるサステナブルイノベーションの創出について、実践的な視点から解説します。</p>
+                    <div class="tags">
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Sustainability</span>
+                        <span class="tag">Technology</span>
+                    </div>
+                </div>
+                <div class="presentation-card">
+                    <h4>研究開発における産学連携の新たな可能性</h4>
+                    <p>産学連携の現状と課題、そして新たなコラボレーションモデルの可能性について議論します。</p>
+                    <div class="tags">
+                        <span class="tag">産学連携</span>
+                        <span class="tag">研究開発</span>
+                        <span class="tag">イノベーション</span>
+                        <span class="tag">コラボレーション</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 吉田丈治 プレゼンテーションポートフォリオ. All rights reserved.</p>
+            <p>Generated with Next.js static export</p>
+        </div>
+    </footer>
+</body>
+</html>
