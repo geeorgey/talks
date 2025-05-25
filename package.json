@@ -11,7 +11,7 @@
     "export": "next build && next export",
     "build:selective": "node scripts/selective-build.js",
     "build:all": "npm run build && npm run export",
-    "deploy": "npm run build:all && touch out/.nojekyll"
+    "deploy": "npm run build:all && touch docs/.nojekyll"
   },
   "dependencies": {
     "next": "^14.0.0",

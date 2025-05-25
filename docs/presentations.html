@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プレゼンテーション一覧 - 吉田丈治</title>
+    <meta name="description" content="吉田丈治の全プレゼンテーション一覧。AI、ビジネス変革、研究開発、産学連携などの幅広いトピックを扱っています。">
+    <link rel="icon" href="/talks/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        .header {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .filters {
+            background: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .filter-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-section h3 {
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-size: 1rem;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .filter-tag {
+            background: #e5e7eb;
+            color: #374151;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .presentation-list {
+            padding: 2rem 0;
+        }
+        
+        .presentation-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-meta {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .card-description {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+        }
+        
+        .view-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .view-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .stats-bar {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <strong>Portfolio</strong>
+                </div>
+                <div class="nav-links">
+                    <a href="/talks/">ホーム</a>
+                    <a href="/talks/presentations.html" style="color: #2563eb;">プレゼンテーション</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="header">
+        <div class="container">
+            <h1>プレゼンテーション一覧</h1>
+            <p>3つのプレゼンテーション、31以上のスライドを公開中</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="container">
+        <div class="filters">
+            <div class="filter-section">
+                <h3>検索</h3>
+                <input type="text" class="search-box" placeholder="プレゼンテーションを検索...">
+            </div>
+            
+            <div class="filter-section">
+                <h3>カテゴリ</h3>
+                <div class="filter-tags">
+                    <span class="filter-tag active">すべて</span>
+                    <span class="filter-tag">ビジネス</span>
+                    <span class="filter-tag">テクノロジー</span>
+                    <span class="filter-tag">研究</span>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h3>タグ</h3>
+                <div class="filter-tags">
+                    <span class="filter-tag">AI</span>
+                    <span class="filter-tag">DX</span>
+                    <span class="filter-tag">イノベーション</span>
+                    <span class="filter-tag">Deep Tech</span>
+                    <span class="filter-tag">産学連携</span>
+                    <span class="filter-tag">研究開発</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation List -->
+    <section class="container">
+        <div class="presentation-list">
+            <!-- Presentation 1 -->
+            <article class="presentation-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">AI時代のビジネス変革 - 生成AIが変える働き方</h2>
+                        <div class="card-meta">2024年3月15日 • リバネス テクノロジーカンファレンス 2024 • 東京</div>
+                    </div>
+                    <a href="/talks/presentations/presentation-001/" class="view-btn">スライドを見る</a>
+                </div>
+                <p class="card-description">
+                    生成AIの急速な発展により、ビジネスの在り方が根本的に変わろうとしています。この講演では、AIがもたらす機会と課題、そして組織がどのように適応すべきかについて説明します。
+                </p>
+                <div class="card-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">DX</span>
+                    <span class="tag">ビジネス変革</span>
+                    <span class="tag">生成AI</span>
+                    <span class="tag">働き方改革</span>
+                    <span class="tag">イノベーション</span>
+                </div>
+                <div class="stats-bar">
+                    <span>📊 11スライド</span>
+                    <span>⏱️ 45分</span>
+                    <span>🌐 日本語</span>
+                    <span>📂 ビジネス</span>
+                </div>
+            </article>
+
+            <!-- Presentation 2 -->
+            <article class="presentation-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">Sustainable Innovation in Deep Tech</h2>
+                        <div class="card-meta">2024年2月28日 • Global Innovation Summit 2024 • オンライン</div>
+                    </div>
+                    <a href="/talks/presentations/presentation-002/" class="view-btn">スライドを見る</a>
+                </div>
+                <p class="card-description">
+                    Deep tech領域におけるサステナブルイノベーションの創出について、実践的な視点から解説します。技術の社会実装と持続可能性の両立を目指すアプローチを紹介します。
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Deep Tech</span>
+                    <span class="tag">Innovation</span>
+                    <span class="tag">Sustainability</span>
+                    <span class="tag">Technology</span>
+                    <span class="tag">Social Impact</span>
+                    <span class="tag">Future Tech</span>
+                </div>
+                <div class="stats-bar">
+                    <span>📊 10スライド</span>
+                    <span>⏱️ 30分</span>
+                    <span>🌐 英語</span>
+                    <span>📂 テクノロジー</span>
+                </div>
+            </article>
+
+            <!-- Presentation 3 -->
+            <article class="presentation-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title">研究開発における産学連携の新たな可能性</h2>
+                        <div class="card-meta">2024年1月20日 • 学術シンポジウム 2024 • 京都</div>
+                    </div>
+                    <a href="/talks/presentations/presentation-003/" class="view-btn">スライドを見る</a>
+                </div>
+                <p class="card-description">
+                    産学連携の現状と課題、そして新たなコラボレーションモデルの可能性について議論します。リバネスの実践事例をもとに、効果的な連携のあり方を探ります。
+                </p>
+                <div class="card-tags">
+                    <span class="tag">産学連携</span>
+                    <span class="tag">研究開発</span>
+                    <span class="tag">イノベーション</span>
+                    <span class="tag">コラボレーション</span>
+                    <span class="tag">アカデミア</span>
+                    <span class="tag">ビジネス</span>
+                </div>
+                <div class="stats-bar">
+                    <span>📊 10スライド</span>
+                    <span>⏱️ 40分</span>
+                    <span>🌐 日本語</span>
+                    <span>📂 研究</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 吉田丈治 プレゼンテーションポートフォリオ. All rights reserved.</p>
+            <p>Generated with Next.js static export</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.querySelector('.search-box').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.presentation-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const description = card.querySelector('.card-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Remove active class from siblings
+                this.parentElement.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tag
+                this.classList.add('active');
+                
+                // Simple filter implementation would go here
+                console.log('Filtering by:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
