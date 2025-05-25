@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Clock, Tag, User, MapPin } from 'lucide-react';
+import { Calendar, Clock, Tag, User, MapPin, ExternalLink, Play } from 'lucide-react';
 import { Presentation } from '@/types';
 import { formatDate, getImagePath, truncateText } from '@/lib/utils';
 
@@ -129,10 +129,10 @@ export default function PresentationCard({
   }
 
   return (
-    <Link href={`/presentations/${id}`} className="block group">
+    <div className="block group">
       <div className="card-hover overflow-hidden">
         {/* Thumbnail */}
-        <div className="aspect-video bg-gray-100 overflow-hidden">
+        <div className="aspect-video bg-gray-100 overflow-hidden relative">
           {thumbnail ? (
             <Image
               src={getImagePath(thumbnail)}
@@ -152,6 +152,16 @@ export default function PresentationCard({
             </div>
           )}
           
+          {/* Open Button Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-200 flex items-center justify-center">
+            <Link
+              href={`/presentations/${id}`}
+              className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white text-primary-600 rounded-full p-3 hover:bg-primary-50 hover:scale-110 transform transition-all"
+            >
+              <Play className="w-6 h-6 fill-current" />
+            </Link>
+          </div>
+          
           {/* Status Badge */}
           {status !== 'published' && (
             <div className="absolute top-2 right-2">
@@ -167,9 +177,11 @@ export default function PresentationCard({
 
         {/* Content */}
         <div className="p-4">
-          <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-            {title}
-          </h3>
+          <Link href={`/presentations/${id}`}>
+            <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-primary-600 transition-colors cursor-pointer">
+              {title}
+            </h3>
+          </Link>
           <p className="text-sm text-gray-600 mb-3 line-clamp-2">
             {description}
           </p>
