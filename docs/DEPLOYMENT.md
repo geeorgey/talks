@@ -93,7 +93,7 @@ Netlify offers easy static site hosting with continuous deployment.
 1. **Connect repository** to Netlify
 2. **Configure build settings**:
    - Build command: `npm run build && npm run export`
-   - Publish directory: `out`
+   - Publish directory: `docs`
    - Node version: 18
 
 3. **Deploy settings**:
@@ -101,7 +101,7 @@ Netlify offers easy static site hosting with continuous deployment.
    # netlify.toml
    [build]
      command = "npm run build && npm run export"
-     publish = "out"
+     publish = "docs"
    
    [build.environment]
      NODE_VERSION = "18"
@@ -119,7 +119,7 @@ Netlify offers easy static site hosting with continuous deployment.
    npm run build:all
    ```
 
-2. **Upload `out` directory** to Netlify
+2. **Upload `docs` directory** to Netlify
 
 ## 🔧 Custom Server Deployment
 
@@ -142,7 +142,7 @@ Deploy to your own server or VPS.
    RUN npm run build && npm run export
    
    FROM nginx:alpine
-   COPY --from=builder /app/out /usr/share/nginx/html
+   COPY --from=builder /app/docs /usr/share/nginx/html
    COPY nginx.conf /etc/nginx/nginx.conf
    EXPOSE 80
    CMD ["nginx", "-g", "daemon off;"]
@@ -190,7 +190,7 @@ Deploy to your own server or VPS.
 
 2. **Upload to server**:
    ```bash
-   rsync -avz out/ user@server:/var/www/html/
+   rsync -avz docs/ user@server:/var/www/html/
    ```
 
 3. **Configure web server** (Apache/Nginx)
@@ -216,7 +216,7 @@ Deploy as a static website on AWS with global CDN.
 3. **Upload files**:
    ```bash
    npm run build:all
-   aws s3 sync out/ s3://your-presentation-portfolio --delete
+   aws s3 sync docs/ s3://your-presentation-portfolio --delete
    ```
 
 ### CloudFront Distribution
@@ -254,7 +254,7 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
-    - run: aws s3 sync out/ s3://${{ secrets.S3_BUCKET }} --delete
+    - run: aws s3 sync docs/ s3://${{ secrets.S3_BUCKET }} --delete
     - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_ID }} --paths "/*"
 ```
 
@@ -302,7 +302,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: build-files
-        path: out/
+        path: docs/
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -312,12 +312,12 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: build-files
-        path: out/
+        path: docs/
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+        publish_dir: ./docs
 ```
 
 ### Selective Deployment
@@ -535,7 +535,7 @@ npm run build -- --debug
 npm run build && npm run analyze
 
 # Test static export
-npm run export && serve out/
+npm run export && serve docs/
 ```
 
 ---
